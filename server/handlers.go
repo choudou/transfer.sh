@@ -583,11 +583,11 @@ func resolveWebAddress(r *http.Request, proxyPath string, proxyPort string) stri
 	var webAddress string
 
 	if len(proxyPath) == 0 {
-		webAddress = fmt.Sprintf("%s://%s/",
+		webAddress = fmt.Sprintf("%ss://%s/",
 			rUrl.ResolveReference(rUrl).Scheme,
 			rUrl.ResolveReference(rUrl).Host)
 	} else {
-		webAddress = fmt.Sprintf("%s://%s/%s",
+		webAddress = fmt.Sprintf("%ss://%s/%s",
 			rUrl.ResolveReference(rUrl).Scheme,
 			rUrl.ResolveReference(rUrl).Host,
 			proxyPath)
